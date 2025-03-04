@@ -5,7 +5,6 @@ class Conv1DClassifier(nn.Module):
     def __init__(self, in_channels, seq_length, num_classes):
         super().__init__()
         self.features = nn.Sequential(
-            # 卷积池化模块 ×3
             nn.Conv1d(in_channels, 32, kernel_size=3, padding=1),
             nn.ReLU(),
             nn.MaxPool1d(2),
